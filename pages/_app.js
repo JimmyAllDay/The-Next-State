@@ -2,11 +2,11 @@ import "tailwindcss/tailwind.css";
 import Head from "next/head";
 import { CartProvider } from "@/hooks/use-shopping-cart";
 import { Header, Footer } from "@/components/index";
-import { Toaster } from "react-hot-toast";
+import Layout from "components";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div>
       <Head>
         <title>The Next State</title>
         <meta name="description" content="The Next State ecommerce store" />
@@ -19,16 +19,15 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <CartProvider>
-        <div className="min-h-screen flex flex-col">
-          <Header />
+        <div className="flex flex-col p-0">
+          <Header fontColor={"text-gray-700"} bgColor={"bg-transparent"} />
           <main className="flex-grow">
             <Component {...pageProps} />
           </main>
           <Footer />
         </div>
       </CartProvider>
-      <Toaster />
-    </>
+    </div>
   );
 }
 

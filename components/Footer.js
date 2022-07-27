@@ -1,18 +1,10 @@
-import { HeartIcon } from '@heroicons/react/solid';
+import Header from "@/components/Header";
 
 const Footer = () => (
-  <footer className="container xl:max-w-screen-xl mx-auto p-6 mt-8 text-center">
-    <p>
-      <a
-        href="https://alterclass.io"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-500 hover:text-current"
-      >
-        Made with{' '}
-        <HeartIcon className="inline-block w-4 h-4 -mt-1 text-red-600 animate-pulse" />{' '}
-        by AlterClass.io
-      </a>
+  <footer className="w-full bg-black mx-auto flex flex-col p-6">
+    <Header fontColor={"text-gray-100"} bgColor={"bg-black"} />
+    <p className="mx-auto">
+      <a className="text-gray-200 font-secondary">All Day &copy;</a>
     </p>
   </footer>
 );
