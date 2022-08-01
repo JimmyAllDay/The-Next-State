@@ -7,6 +7,6 @@ export { default as HeaderLinks } from "./HeaderLinks";
 export { default as ShoppingCart } from "./ShoppingCart";
 export { default as SearchBar } from "./SearchBar";
 export { default as HeaderComps } from "./HeaderComps";
-export { default as Menu } from "./menu";
+export { default as Menu } from "./Menu";
 export { default as FooterServices } from "./FooterServices";
 export { default as FooterDetails } from "./FooterDetails";
