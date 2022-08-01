@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <CartProvider>
         <div className="flex flex-col p-0">
-          <Header fontColor={"text-gray-700"} bgColor={"bg-transparent"} />
+          <Header mainNav={true} />
           <main className="flex-grow">
             <Component {...pageProps} />
           </main>

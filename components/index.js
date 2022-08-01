@@ -1,10 +1,12 @@
 export { default as Header } from "./Header";
 export { default as Footer } from "./Footer";
 export { default as Logo } from "./Logo";
-export { default as Rating } from "./Rating";
 export { default as ProductCard } from "./ProductCard";
 export { default as Layout } from "./Layout";
 export { default as HeaderLinks } from "./HeaderLinks";
 export { default as ShoppingCart } from "./ShoppingCart";
 export { default as SearchBar } from "./SearchBar";
 export { default as HeaderComps } from "./HeaderComps";
+export { default as Menu } from "./menu";
+export { default as FooterServices } from "./FooterServices";
+export { default as FooterDetails } from "./FooterDetails";

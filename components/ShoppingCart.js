@@ -4,19 +4,23 @@ import { Icon } from "@iconify/react";
 import { useShoppingCart } from "@/hooks/use-shopping-cart";
 import { formatCurrency } from "@/lib/utils";
 
-export default function ShoppingCart({ fontColor }) {
+export default function ShoppingCart({ mainNav }) {
   const { totalPrice, cartCount } = useShoppingCart();
   return (
     <div className="flex">
       <Link href="/cart">
         <a
-          className={`flex items-center space-x-1 ${fontColor} hover:text-gray-400`}
+          className={`flex ${
+            mainNav
+              ? "text-gray-500 hover:text-gray-800"
+              : "text-gray-500 hover:text-gray-200"
+          }`}
         >
           <Icon icon="bi:bag" className="text-3xl" />
 
           <p className="text-lg">
-            {/* {formatCurrency(totalPrice)}{" "}
-            <span className={`text-sm ${fontColor}`}>({cartCount})</span> */}
+            {/* {formatCurrency(totalPrice)}{" "} */}
+            {/* <span className={`text-sm text-gray-500`}>({cartCount})</span> */}
           </p>
         </a>
       </Link>

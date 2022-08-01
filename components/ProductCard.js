@@ -1,25 +1,24 @@
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { toast } from 'react-hot-toast';
-import { useShoppingCart } from '@/hooks/use-shopping-cart';
-import { formatCurrency } from '@/lib/utils';
-import { Rating } from '@/components/index';
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { toast } from "react-hot-toast";
+import { useShoppingCart } from "@/hooks/use-shopping-cart";
+import { formatCurrency } from "@/lib/utils";
 
-const ProductCard = props => {
+const ProductCard = (props) => {
   const { cartCount, addItem } = useShoppingCart();
   const [adding, setAdding] = useState(false);
 
   const toastId = useRef();
   const firstRun = useRef(true);
 
-  const handleOnAddToCart = event => {
+  const handleOnAddToCart = (event) => {
     event.preventDefault();
 
     setAdding(true);
-    toastId.current = toast.loading('Adding 1 item...');
+    toastId.current = toast.loading("Adding 1 item...");
 
-    if (typeof props.onClickAdd === 'function') {
+    if (typeof props.onClickAdd === "function") {
       props.onClickAdd();
     }
 
@@ -39,7 +38,7 @@ const ProductCard = props => {
       });
     }
 
-    if (typeof props.onAddEnded === 'function') {
+    if (typeof props.onAddEnded === "function") {
       props.onAddEnded();
     }
   }, [cartCount]);
@@ -60,7 +59,7 @@ const ProductCard = props => {
         {/* Name + Rating */}
         <div className="mt-4 sm:mt-8">
           <p className="font-semibold text-lg capitalize">{props.name}</p>
-          <Rating rate={props?.rating?.rate} count={props?.rating?.count} />
+          {/* <Rating rate={props?.rating?.rate} count={props?.rating?.count} /> */}
         </div>
 
         {/* Price + CTA */}
@@ -78,11 +77,11 @@ const ProductCard = props => {
             disabled={adding || props.disabled}
             className={`border rounded-lg py-1 px-4 hover:bg-rose-500 hover:border-rose-500 hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
               adding
-                ? 'disabled:bg-rose-500 disabled:border-rose-500 disabled:text-white'
-                : 'disabled:hover:bg-transparent disabled:hover:text-current disabled:hover:border-gray-200'
+                ? "disabled:bg-rose-500 disabled:border-rose-500 disabled:text-white"
+                : "disabled:hover:bg-transparent disabled:hover:text-current disabled:hover:border-gray-200"
             }`}
           >
-            {adding ? 'Adding...' : 'Add to cart'}
+            {adding ? "Adding..." : "Add to cart"}
           </button>
         </div>
       </a>

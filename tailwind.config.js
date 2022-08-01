@@ -11,7 +11,10 @@ module.exports = {
         secondary: ["Lato", "sans-serif"],
       },
       colors: {
-        rose: colors.rose,
+        font: "#2626262",
+        nav: "#71717A",
+        navHover: "#2626262",
+        footerNavHover: "text-gray-200",
       },
     },
   },
