@@ -10,3 +10,4 @@ export { default as HeaderComps } from "./HeaderComps";
 export { default as Menu } from "./Menu";
 export { default as FooterServices } from "./FooterServices";
 export { default as FooterDetails } from "./FooterDetails";
+export { default as FooterSignUp } from "./FooterSignUp";

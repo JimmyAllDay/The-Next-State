@@ -1,32 +1,73 @@
 import { Icon } from "@iconify/react";
+import { FooterSignUp } from "@/components/index";
+
+function LinksCol({ title, titleFont, linksArr }) {
+  const mappedLinks = linksArr.map((link, i) => {
+    return (
+      <a key={i} href={link.href} className="text-gray-200 hover:text-gray-400">
+        {link.name}
+      </a>
+    );
+  });
+
+  return (
+    <div className="w-1/4 flex flex-col text-gray-200">
+      <h1 className={`text-2xl font-bold ${titleFont} h-2/5`}>{title}</h1>
+      {mappedLinks}
+    </div>
+  );
+}
+
+function FooterLinks() {
+  const linksColOneArr = [
+    { name: "About", href: "/about" },
+    { name: "Careers", href: "/careers" },
+    { name: "Investors", href: "/investors" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms & Conditions", href: "/terms" },
+  ];
+
+  const linksColTwoArr = [
+    { name: "About", href: "/about" },
+    { name: "Careers", href: "/careers" },
+    { name: "Investors", href: "/investors" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms & Conditions", href: "/terms" },
+  ];
+  const linksColThreeArr = [
+    { name: "About", href: "/about" },
+    { name: "Careers", href: "/careers" },
+    { name: "Investors", href: "/investors" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms & Conditions", href: "/terms" },
+  ];
+
+  return (
+    <div className="w-full md:w-1/2 flex justify-around md:justify-end space-x-4">
+      <LinksCol
+        title={"The Next State"}
+        titleFont={"font-primary"}
+        linksArr={linksColOneArr}
+      />
+      <LinksCol
+        title={"Help"}
+        titleFont={"font-bold"}
+        linksArr={linksColTwoArr}
+      />
+      <LinksCol
+        title={"Follow Us"}
+        titleFont={"font-bold"}
+        linksArr={linksColThreeArr}
+      />
+    </div>
+  );
+}
 
 export default function FooterDetails() {
   return (
     <div className="flex flex-col-reverse md:flex-row my-6">
-      <div className="w-full md:w-1/2 border">
-        <p>Footer Details Component</p>
-      </div>
-      <div className="w-full md:w-1/2 border flex flex-col p-3 items-center md:items-start">
-        <div className="flex mb-2  w-[350px] sm:w-3/4">
-          <Icon
-            icon="ei:envelope"
-            className="text-4xl w-[40px] flex-shrink-0"
-          />
-          <p className="my-auto ml-2">
-            Let's connect. Get updates on new arrivals, sales and more.
-          </p>
-        </div>
-
-        <div className="w-[350px] sm:w-3/4">
-          <input
-            type="email"
-            className="w-3/4 h-[45px] bg-gray-600 rounded-l-md px-2 text-gray-200 focus:outline-none"
-          />
-          <button className="bg-white w-1/4 h-[45px] rounded-r-md text-gray-900">
-            SIGN UP
-          </button>
-        </div>
-      </div>
+      <FooterLinks />
+      <FooterSignUp />
     </div>
   );
 }
