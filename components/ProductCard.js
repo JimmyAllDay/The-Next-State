@@ -6,6 +6,7 @@ import { useShoppingCart } from "@/hooks/use-shopping-cart";
 import { formatCurrency } from "@/lib/utils";
 
 const ProductCard = (props) => {
+  console.log(props);
   const { cartCount, addItem } = useShoppingCart();
   const [adding, setAdding] = useState(false);
 
@@ -43,6 +44,7 @@ const ProductCard = (props) => {
     }
   }, [cartCount]);
 
+  //! The props being passed to link below passed as undefined
   return (
     <Link href={`/products/${props.id}`}>
       <a className="border rounded-md p-6 group">
