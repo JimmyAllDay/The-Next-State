@@ -6,6 +6,7 @@ import { useShoppingCart } from "@/hooks/use-shopping-cart";
 import { formatCurrency } from "@/lib/utils";
 
 const ProductCard = (props) => {
+  console.log("hero card", props);
   const { cartCount, addItem } = useShoppingCart();
   const [adding, setAdding] = useState(false);
 
@@ -49,7 +50,7 @@ const ProductCard = (props) => {
         {/* Product's image */}
         <div className="relative w-full h-64 group-hover:transform group-hover:scale-125 group-hover:ease-in-out group-hover:duration-500">
           <Image
-            src={props.image}
+            src={props.images[0]}
             alt={props.name}
             layout="fill"
             objectFit="contain"

@@ -56,7 +56,7 @@ const Product = (props) => {
           {/* Product's image */}
           <div className="relative w-72 h-72 sm:w-96 sm:h-96">
             <Image
-              src={props.image}
+              src={props.images[0]}
               alt={props.name}
               layout="fill"
               objectFit="contain"
@@ -65,7 +65,8 @@ const Product = (props) => {
 
           {/* Product's details */}
           <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6">
-            <h2 className="text-3xl font-semibold">{props.name}</h2>
+            <h2 className="text-3xl font-semibold">{props.brand}</h2>
+            <h2 className="text-xl font-semibold">{props.name}</h2>
             <p>
               <span className="text-gray-500">Availability:</span>{" "}
               <span className="font-semibold">In stock</span>

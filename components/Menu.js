@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { Turn as Hamburger } from "hamburger-react";
+
 export default function Menu() {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <div className="flex sm:hidden">
-      <p className="w-2/3 border">MainNav Comp</p>
-    </div>
+    <>
+      <Hamburger toggled={isOpen} toggle={setOpen} />
+    </>
   );
 }

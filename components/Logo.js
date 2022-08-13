@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const Logo = ({ mainNav }) => (
-  <Link href="/">
+  <Link href="/" className="">
     <a
-      className={`hidden md:inline-flex font-extrabold text-3xl  font-primary w-1/3 justify-center ${
+      className={`font-extrabold text-3xl font-primary justify-center my-auto ${
         mainNav ? "text-gray-900" : "text-gray-200"
       }`}
     >

@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 export default function FooterSignUp() {
   return (
-    <div className="w-full md:w-1/2 flex flex-col px-3 items-center md:items-start">
+    <div className="w-full flex flex-col px-3 items-center md:items-start">
       <div className="flex mb-2  w-[350px] sm:w-3/4">
         <Icon icon="ei:envelope" className="text-4xl w-[40px] flex-shrink-0" />
         <p className="my-auto ml-2">

@@ -12,7 +12,7 @@ export default function HeaderLinks({ mainNav }) {
   ];
 
   return (
-    <div className="space-x-4 w-1/3 justify-start hidden sm:flex">
+    <div className="space-x-4 justify-start my-auto">
       {navLinks.map((link, index) => {
         return (
           <Link key={index} href={link.href}>

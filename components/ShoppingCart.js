@@ -7,23 +7,21 @@ import { formatCurrency } from "@/lib/utils";
 export default function ShoppingCart({ mainNav }) {
   const { totalPrice, cartCount } = useShoppingCart();
   return (
-    <div className="flex">
-      <Link href="/cart">
-        <a
-          className={`flex ${
-            mainNav
-              ? "text-gray-500 hover:text-gray-800"
-              : "text-gray-500 hover:text-gray-200"
-          }`}
-        >
-          <Icon icon="bi:bag" className="text-3xl" />
+    <Link href="/cart">
+      <a
+        className={`flex ${
+          mainNav
+            ? "text-gray-500 hover:text-gray-800"
+            : "text-gray-500 hover:text-gray-200"
+        }`}
+      >
+        <Icon icon="bi:bag" className="text-2xl" />
 
-          <p className="text-lg">
-            {/* {formatCurrency(totalPrice)}{" "} */}
-            {/* <span className={`text-sm text-gray-500`}>({cartCount})</span> */}
-          </p>
-        </a>
-      </Link>
-    </div>
+        {/* <p className="text-lg"> */}
+        {/* {formatCurrency(totalPrice)}{" "} */}
+        {/* <span className={`text-sm text-gray-500`}>({cartCount})</span> */}
+        {/* </p> */}
+      </a>
+    </Link>
   );
 }

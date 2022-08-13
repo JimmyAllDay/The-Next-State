@@ -12,9 +12,8 @@ module.exports = {
       },
       colors: {
         font: "#2626262",
-        nav: "#71717A",
+        nav: "#a0aec0",
         navHover: "#2626262",
-        footerNavHover: "text-gray-200",
       },
     },
   },

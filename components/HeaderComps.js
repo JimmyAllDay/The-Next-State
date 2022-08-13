@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 export default function HeaderComps({ mainNav }) {
   return (
-    <div className="w-1/3 justify-end space-x-4 flex mx-auto">
+    <div className="md:w-1/3 space-x-4 flex border">
       <SearchBar mainNav={mainNav} />
       <ShoppingCart mainNav={mainNav} />
     </div>
