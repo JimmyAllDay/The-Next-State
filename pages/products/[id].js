@@ -10,6 +10,7 @@ import { MinusSmIcon, PlusSmIcon } from "@heroicons/react/outline";
 import products from "products";
 
 const Product = (props) => {
+  console.log(props);
   const router = useRouter();
   const { cartCount, addItem } = useShoppingCart();
   const [qty, setQty] = useState(1);
