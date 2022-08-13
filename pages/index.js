@@ -9,44 +9,53 @@ import { render } from "react-dom";
 export default function Home() {
   const [disabled, setDisabled] = useState(false);
 
-  const productsMap = products.map((product, i) => {
-    // if (i === 0 || i === 9) {
-    //   return (
-    //     <HeroCard
-    //       key={product.id}
-    //       disabled={disabled}
-    //       onClickAdd={() => setDisabled(true)}
-    //       onAddEnded={() => setDisabled(false)}
-    //       {...product}
-    //     />
-    //   );
-    // } else if (i === 1 || i === 2) {
-    //   return (
-    //     <FeatureCard
-    //       key={product.id}
-    //       disabled={disabled}
-    //       onClickAdd={() => setDisabled(true)}
-    //       onAddEnded={() => setDisabled(false)}
-    //       {...product}
-    //     />
-    //   );
-    // } else {
-    return (
-      <ProductCard
-        key={product.id}
-        disabled={disabled}
-        onClickAdd={() => setDisabled(true)}
-        onAddEnded={() => setDisabled(false)}
-        {...product}
-      />
-    );
-  });
+  // const productsMap = products.map((product, i) => {
+  //   console.log(product);
+  //   if (i === 0 || i === 9) {
+  //     return (
+  //       <HeroCard
+  //         key={product.id}
+  //         disabled={disabled}
+  //         onClickAdd={() => setDisabled(true)}
+  //         onAddEnded={() => setDisabled(false)}
+  //         {...product}
+  //       />
+  //     );
+  //   } else if (i === 1 || i === 2) {
+  //     return (
+  //       <FeatureCard
+  //         key={product.id}
+  //         disabled={disabled}
+  //         onClickAdd={() => setDisabled(true)}
+  //         onAddEnded={() => setDisabled(false)}
+  //         {...product}
+  //       />
+  //     );
+  //   } else {
+  //     return (
+  //       <ProductCard
+  //         key={product.id}
+  //         disabled={disabled}
+  //         onClickAdd={() => setDisabled(true)}
+  //         onAddEnded={() => setDisabled(false)}
+  //         {...product}
+  //       />
+  //     );
+  //   }
   // });
 
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {productsMap}
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            disabled={disabled}
+            onClickAdd={() => setDisabled(true)}
+            onAddEnded={() => setDisabled(false)}
+            {...product}
+          />
+        ))}
       </div>
     </div>
   );
