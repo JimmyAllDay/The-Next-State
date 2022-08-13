@@ -6,7 +6,6 @@ import { useShoppingCart } from "@/hooks/use-shopping-cart";
 import { formatCurrency } from "@/lib/utils";
 
 const ProductCard = (props) => {
-  console.log("hero card", props);
   const { cartCount, addItem } = useShoppingCart();
   const [adding, setAdding] = useState(false);
 

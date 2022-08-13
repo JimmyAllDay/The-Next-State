@@ -96,7 +96,7 @@ const Product = (props) => {
                   onClick={() => setQty((prev) => prev + 1)}
                   className="hover:bg-green-100 hover:text-green-500 rounded-md p-1"
                 >
-                  <PlusSmIcon className="w-6 h-6 flex-shrink-0 " />
+                  <PlusSmIcon className="w-6 h-6 flex-shrink-0" />
                 </button>
               </div>
 
