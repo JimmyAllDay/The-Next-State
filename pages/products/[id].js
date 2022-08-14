@@ -105,7 +105,7 @@ const Product = (props) => {
                 type="button"
                 onClick={handleOnAddToCart}
                 disabled={adding}
-                className="mt-8 border rounded py-2 px-6 bg-rose-500 hover:bg-rose-600 border-rose-500 hover:border-rose-600 focus:ring-4 focus:ring-opacity-50 focus:ring-rose-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="mt-8 rounded py-2 px-6 bg-red-300 hover:bg-red-400 focus:ring-4 focus:ring-opacity-50 focus:ring-rose-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Add to cart ({qty})
               </button>
