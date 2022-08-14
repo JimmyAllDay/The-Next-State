@@ -49,7 +49,7 @@ export default function HeroCard(props) {
         {/* Product's image */}
         <div className="relative min-h-screen w-full">
           <Image
-            src={props.images[0]}
+            src={props.image}
             alt={props.name}
             layout="fill"
             objectFit="cover"

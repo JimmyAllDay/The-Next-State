@@ -10,7 +10,6 @@ import { MinusSmIcon, PlusSmIcon } from "@heroicons/react/outline";
 import products from "products";
 
 const Product = (props) => {
-  console.log(props);
   const router = useRouter();
   const { cartCount, addItem } = useShoppingCart();
   const [qty, setQty] = useState(1);
@@ -57,7 +56,7 @@ const Product = (props) => {
           {/* Product's image */}
           <div className="relative w-72 h-72 sm:w-96 sm:h-96">
             <Image
-              src={props.images[0]}
+              src={props.image}
               alt={props.name}
               layout="fill"
               objectFit="contain"

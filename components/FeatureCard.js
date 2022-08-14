@@ -49,7 +49,7 @@ export default function FeatureCard(props) {
         {/* Product's image */}
         <div className="relative min-w-[50vw] min-h-[100vh] bg-black">
           <Image
-            src={props.images[0]}
+            src={props.image}
             alt={props.name}
             layout="fill"
             objectFit="cover"
